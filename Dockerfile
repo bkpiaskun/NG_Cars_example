@@ -17,10 +17,12 @@ COPY ./manage.py /app/manage.py
 COPY ./scripts /scripts
 RUN chmod +x /scripts/*
 
+RUN python /app/manage.py migrate
 
 RUN adduser -D user
 USER user
 
 WORKDIR /app
 
-CMD ["entrypoint.sh"]
+
+# CMD ["entrypoint.sh"]
