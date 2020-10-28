@@ -1,6 +1,5 @@
 from django.test import TestCase,Client
 from django.urls import reverse
-from mixer.backend.django import mixer
 import json
 from cars import views
 from cars.models import Maker,Car,Rate
